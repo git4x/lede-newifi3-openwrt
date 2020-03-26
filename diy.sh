@@ -17,3 +17,6 @@ git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
 git clone https://github.com/destan19/OpenAppFilter.git package/mine/OpenAppFilter
 # disable usb3.0
 git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/mine/luci-app-usb3disable
+
+./scripts/feeds update -a
+./scripts/feeds install -a
