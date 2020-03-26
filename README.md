@@ -1,4 +1,4 @@
-##include openclash ssr-plus simple version 
+## include openclash ssr-plus simple version 
 
 # Actions-OpenWrt
 
