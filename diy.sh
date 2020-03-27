@@ -6,7 +6,6 @@
 # Blog: https://p3terx.com
 #=================================================
 # 更改默认主题为Argon
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/mine/luci-theme-argon_new
 sed -i 's/luci-theme-bootstrap/luci-theme-argon_new/g' package/feeds/luci/luci/Makefile
 # Modify default IP
