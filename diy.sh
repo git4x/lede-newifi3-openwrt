@@ -11,7 +11,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon_new/g' package/feeds/luci/luci/M
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 #Clash
-git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
+#git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 # 管控上网行为
 git clone https://github.com/destan19/OpenAppFilter.git package/mine/OpenAppFilter
 # disable usb3.0
