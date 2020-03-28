@@ -9,8 +9,8 @@
 sed -i 's/OpenWrt/newifi3/g' package/base-files/files/bin/config_generate
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
-#Clash
-git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
+#Openclash
+git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
 #修复Clash随OpenWrt官方源码一起编译出现的依赖冲突
 #sed -i 's/+luci +luci-base //' package/luci-app-clash/Makefile
 # 管控上网行为
