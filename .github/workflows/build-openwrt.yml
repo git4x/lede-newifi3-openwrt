@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Auto Build
+name: Build by man
 on:
   release:
     types: published
