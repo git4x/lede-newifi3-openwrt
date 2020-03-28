@@ -20,6 +20,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makef
 cd package/lean  
 rm -rf luci-theme-argon  
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  
-
+cd ..
+cd ..
 ./scripts/feeds update -a
 ./scripts/feeds install -a
