@@ -6,8 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build OpenWrt
-
+name: Auto Build
 on:
   release:
     types: published
@@ -44,7 +43,6 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo -E apt-get -qq install python python2.7 perl imagemagick subversion git gcc g++ binutils autoconf automake libtool-bin make bzip2 libncurses5-dev libreadline-dev zlib1g-dev flex bison patch texinfo tofrodos gettext pkg-config libstring-crc32-perl gawk libusb-dev unzip intltool libacl1-dev libcap-dev libc6-dev libglib2.0-dev unzip wget curl zip libssl-dev
         sudo swapoff /swapfile
         sudo rm -rf /swapfile /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
@@ -84,7 +82,6 @@ jobs:
       id: compile
       run: |
         cd openwrt
-        cp .config bin
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 V=s
         echo "::set-output name=status::success"
@@ -101,7 +98,6 @@ jobs:
       run: |
         cd openwrt/bin/targets/*/*
         rm -rf packages
-        cp /openwrt/.config /openwrt/bin
         echo "::set-env name=FIRMWARE::$PWD"
         echo "::set-output name=status::success"
     - name: Upload firmware directory
