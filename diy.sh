@@ -18,11 +18,11 @@ git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 #修复Clash随OpenWrt官方源码一起编译出现的依赖冲突
 #sed -i 's/+luci +luci-base //' package/luci-app-clash/Makefile
 # OpenClash
-git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
+git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 # 管控上网行为
-git clone https://github.com/destan19/OpenAppFilter.git package/mine/OpenAppFilter
+git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # disable usb3.0
-git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/mine/luci-app-usb3disable
+git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/luci-app-usb3disable
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
