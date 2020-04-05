@@ -1,6 +1,7 @@
-## include openclash ssr-plus simple version 
+## Auto Build OpenWrt For newifi3 Using GitHub Actions
 
-Build OpenWrt using GitHub Actions
+
+this my own using simple version
 
 ## Usage
 
