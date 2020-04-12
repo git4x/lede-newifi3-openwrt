@@ -5,18 +5,27 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
-#修改机器名称
+# 修改机器名称
 sed -i 's/OpenWrt/newifi3/g' package/base-files/files/bin/config_generate
-# Modify default IP
+
+# 修改默认IP
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
+
 #Openclash
 git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
-#修复Clash随OpenWrt官方源码一起编译出现的依赖冲突
-#sed -i 's/+luci +luci-base //' package/luci-app-clash/Makefile
+
+# 复杂的AdGuardHome的openwrt的luci界面
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/mine/luci-app-adguardhome
+
+# KPR plus+
+git clone https://github.com/project-openwrt/luci-app-koolproxyR.git package/mine/luci-app-koolproxyR
+
 # 管控上网行为
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+
 # disable usb3.0
 git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/luci-app-usb3disable
+
 # 更改默认主题为Argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
 rm -rf package/lean/luci-theme-argon  
