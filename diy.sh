@@ -11,10 +11,10 @@ sed -i 's/OpenWrt/newifi3/g' package/base-files/files/bin/config_generate
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 
-#Openclash
-#git clone https://github.com/vernesong/OpenClash.git package/OpenClash
+# Openclash
+git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 
-# 复杂的AdGuardHome的openwrt的luci界面
+# AdGuardHome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
 # KPR plus+
@@ -26,8 +26,10 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # disable usb3.0
 git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/luci-app-usb3disable
 
-#其它自定义软件
-git clone https://github.com/kenzok8/openwrt-packages.git  package/lean/package
+# 其它自定义软件
+git clone https://github.com/kenzok8/openwrt-packages.git
+cp openwrt-packages/luci-app-passwall packages/luci-app-passwall
+cp openwrt-packages/luci-app-ssr-plus packages/luci-app-ssr-plus
 
 # 更改默认主题为Argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
