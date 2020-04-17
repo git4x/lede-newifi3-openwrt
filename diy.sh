@@ -28,7 +28,7 @@ git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/luci
 
 # 其它自定义软件
 git clone https://github.com/kenzok8/openwrt-packages.git
-mv openwrt-packages/luci-app-passwall package/
+#mv openwrt-packages/luci-app-passwall package/
 mv openwrt-packages/luci-app-ssr-plus package/
 rm -rf openwrt-packages
 
