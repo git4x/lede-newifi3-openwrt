@@ -26,11 +26,13 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # disable usb3.0
 git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/luci-app-usb3disable
 
+#plus
+sed 's/#src-git/src-git/'  feeds.conf.default
 # 其它自定义软件
-git clone https://github.com/kenzok8/openwrt-packages.git
+#git clone https://github.com/kenzok8/openwrt-packages.git
 #mv openwrt-packages/luci-app-passwall package/
-mv openwrt-packages/luci-app-ssr-plus package/
-rm -rf openwrt-packages
+#mv openwrt-packages/luci-app-ssr-plus package/
+#rm -rf openwrt-packages
 
 # 更改默认主题为Argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
