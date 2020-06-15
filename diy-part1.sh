@@ -9,7 +9,7 @@
 sed -i 's/OpenWrt/newifi3/g' package/base-files/files/bin/config_generate
 
 # 修改默认IP
-sed -i 's/192.168.1.1/172.22.22.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 
 # Openclash
 git clone https://github.com/vernesong/OpenClash.git package/OpenClash
