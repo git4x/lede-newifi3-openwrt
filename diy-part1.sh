@@ -9,7 +9,7 @@
 sed -i 's/OpenWrt/newifi3/g' package/base-files/files/bin/config_generate
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/172.22.22.1/g' package/base-files/files/bin/config_generate
 
 # Openclash
 git clone https://github.com/vernesong/OpenClash.git package/OpenClash
@@ -35,10 +35,10 @@ EOF
 #mv openwrt-packages/luci-app-passwall package/
 #rm -rf openwrt-packages
 
-# 更改默认主题为Argon
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
-rm -rf package/lean/luci-theme-argon  
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon  
+# 更改luci-theme-bootstrap为Argon
+#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/collections/luci/Makefile
+#rm -rf package/lean/luci-theme-argon  
+#git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon  
 
 
 ./scripts/feeds update -a
