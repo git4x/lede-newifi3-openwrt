@@ -27,10 +27,8 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/luci-app-usb3disable
 
 #ssr-plus
-#echo "src-git helloworld https://github.com/fw876/helloworld" >>feeds.conf.default
-#cat >  feeds.conf.default <<EOF
-#src-git helloworld https://github.com/fw876/helloworld
-#EOF
+echo "src-git helloworld https://github.com/fw876/helloworld" >>feeds.conf.default
+
 # 其它自定义软件
 #git clone https://github.com/kenzok8/openwrt-packages.git
 #mv openwrt-packages/luci-app-passwall package/
