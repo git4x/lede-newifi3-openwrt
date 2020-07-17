@@ -55,6 +55,7 @@ jobs:
         cd openwrt
         git checkout ab025ed8d3cce42d1fd77f78aa37337ad6ee97bb
         git pull origin master
+        git config pull.rebase false
         cd ..
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     - name: Load custom feeds
