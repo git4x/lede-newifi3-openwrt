@@ -34,6 +34,9 @@ echo "src-git helloworld https://github.com/fw876/helloworld" >>feeds.conf.defau
 #mv openwrt-packages/luci-app-passwall package/
 #rm -rf openwrt-packages
 
+./scripts/feeds update -a
+./scripts/feeds install -a
+
 # 更改luci-theme-bootstrap为Argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 rm -rf package/lean/luci-theme-argon  
