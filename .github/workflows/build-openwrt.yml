@@ -51,11 +51,11 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+        git clone  https://github.com/coolsnowwolf/lede.git openwrt
+        cd openwrt
+        git checkout d669a371b655565764f1f0d010976c65c444e1c9
+        cd ..
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-    - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
