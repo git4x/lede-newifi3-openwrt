@@ -11,8 +11,8 @@ sed -i 's/OpenWrt/newifi3/g' package/base-files/files/bin/config_generate
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 
-# Clash
-git clone https://github.com/frainzy1477/luci-app-clash.git package/Clash
+# OpenClash
+git clone https://github.com/vernesong/OpenClash.git
 
 # AdGuardHome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
