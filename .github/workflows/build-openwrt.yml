@@ -53,7 +53,7 @@ jobs:
         df -hT $PWD
         git clone  https://github.com/coolsnowwolf/lede.git openwrt
         cd openwrt
-        git checkout d669a371b655565764f1f0d010976c65c444e1c9
+        git checkout 7bd0d56834062e27f6d3cf1978d8f20e982cda76
         cd ..
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     - name: Load custom feeds
