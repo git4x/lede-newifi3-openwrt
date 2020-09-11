@@ -19,15 +19,19 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci
 # KPR plus+
 #git clone https://github.com/project-openwrt/luci-app-koolproxyR.git package/luci-app-koolproxyR
 
-# 管控上网行为
+# uci-oaf-app
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # disable usb3.0
 git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/luci-app-usb3disable
 
-#ssr-plus
+# ssr-plus
 echo "src-git helloworld https://github.com/fw876/helloworld" >>feeds.conf.default
 #git clone https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
+
+# luci-app-netdata
+rm -rf lede/package/lean/luci-app-netdata
+git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 
 # 其它自定义软件
 #git clone https://github.com/kenzok8/openwrt-packages.git
