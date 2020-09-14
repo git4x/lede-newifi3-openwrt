@@ -19,7 +19,6 @@ env:
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
-  SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: false
   UPLOAD_COWTRANSFER: true
@@ -51,14 +50,10 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
-        #ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        #cd openwrt
-        #git reset --hard 7bd0d56834062e27f6d3cf1978d8f20e982cda76
-
-    - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
+        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        cd openwrt
+        git reset --hard 7bd0d56834062e27f6d3cf1978d8f20e982cda76
 
     - name: Load custom feeds
       run: |
