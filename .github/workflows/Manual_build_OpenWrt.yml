@@ -34,9 +34,7 @@ jobs:
       run: |
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        git clone https://github.com/coolsnowwolf/lede -b master openwrt
-        cd openwrt
-        git reset --hard 63bc209d7daadf69ef401ebf30c06d93fad21e52
+        git clone https://github.com/silmace/lede.git openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
      
     - name: Run Before-Update-Feeds Script
