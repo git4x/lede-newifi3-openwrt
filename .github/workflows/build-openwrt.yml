@@ -1,4 +1,4 @@
-name: Manual build 
+name: test
 on:
   release:
     types: published
